@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<style>
+    p {
+        color: black; /* Element selector */
+    }
+    .blue-text {
+        color: blue; /* Class selector */
+    }
+    #green-text {
+        color: green; /* ID selector */
+    }
+</style>
+</head>
+<body>
+<h2>CSS Specificity Rules</h2>
+<p id="green-text" class="blue-text" style="color: red;">
+    This paragraph demonstrates CSS specificity rules.
+</p>
+<p>Explanation: Inline styles have the highest specificity, so the text appears in red, overriding the ID, class, and element styles.</p>
+</body>
+</html>

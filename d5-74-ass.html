@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Register</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            display: flex;
+            gap: 50px;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .box {
+            border: 3px double black;
+            width: 300px;
+            height: 150px;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+        }
+
+        .box a {
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            color: black;
+            margin: 0 30px;
+            display: inline-block;
+            padding: 10px;
+            border: 1px solid black;
+            border-radius: 5px;
+        }
+
+        .message {
+            border: 2px solid black;
+            padding: 10px;
+            width: 200px;
+            text-align: center;
+            display: none;
+        }
+
+        /* CSS for showing messages when clicking anchor tags */
+        #login:target .login-message,
+        #register:target .register-message {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Main Box -->
+        <div class="box">
+            <a href="#login">SignIn</a>
+            <a href="#register">Signup</a>
+        </div>
+
+        <!-- Messages -->
+        <div id="login">
+            <div class="message login-message">
+                Welcome to login page
+            </div>
+        </div>
+
+        <div id="register">
+            <div class="message register-message">
+                Welcome to register page
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
