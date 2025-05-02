@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Media Queries</title>
+        <link rel="stylesheet" href= "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
+        <style>
+            body{
+                padding:0px;
+                margin: 0px;
+                box-sizing: border-box;
+            }
+            .parent{
+                height: 100vh;
+            }
+
+            .header{
+                height: 10%;
+                background-color: lightblue;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            .header__logo{
+                font-size: 3vw;
+            }
+            .header__menu{
+                display: flex;
+                gap: 20px;
+            }
+            .main{
+                height:80%;
+                display: flex;
+            }
+            .main__img{
+                flex: 1;
+                background-image: url("./meeshow.png");
+                background-repeat: no-repeat;
+                background-position: center center;
+            }
+            .main__info{
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+
+            .main__info__1{
+                font-size: 3vw;
+            }
+            
+            .footer{
+                height:10%;
+                display: flex;
+                gap: 40px;
+                justify-content: flex-end;
+                align-items: center;
+                font-size: 30px;
+            }
+            @media(max-width:600px){
+                .header__menu{
+                    display: none;
+                }
+                .header{
+                    justify-content: center;
+                    align-items: center;
+                }
+                .header__logo{
+                    font-size: 8vw;
+                }
+                .main__info__2, .main__info__3, .main__info__4,.main__info__5{
+                display:none;
+                }
+                 .main__info__1{
+                font-size: 5vw;
+                    text-align: center;
+                }
+            }
+
+        </style>
+     </head>
+    <body>
+        <div class="parent">
+            <!--header-->
+            <div class="header">
+            <div class="header___logo">Finishing School</div> 
+            <div class="header___menu">
+                <a href="#"><i class="fa fa-home"></i> Home</a>
+                <a href="#"><i class="fa fa-info"></i> about</a>  
+                <a href="#"><i class="fa fa-phone"></i> contact</a>  
+                <a href="#"><i class="fa fa-sign-in"></i> login</a>
+            </div>
+        </div>
+    <!--main-->
+    <div class="main">
+        <div class="main__img"></div>
+        <div class="main__info">
+            <p class="main__info__1">Fullstack Java</p>
+            <p class="main__info__2">Java</p>
+            <p class="main__info__3">Hyderabad</p>
+            <p class="main__info__4">CyberTowers</p>
+            <p class="main__info__5">500081</p>
+        </div>
+    </div> 
+        <!--footer-->
+        <div class="footer">
+        <i class="fa fa-facebook"></i>
+        <i class="fa fa-google"></i>
+        <i class="fa fa-twitter"></i>
+        <i class="fa fa-instagram"></i>
+    </div>
+
+</body>
+</html>

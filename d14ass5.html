@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webpage with Positioning</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        .sticky-navbar {
+            position: sticky;
+            top: 0;
+            background-color: blue;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            z-index: 100;
+        }
+        .hero {
+            position: relative;
+            height: 300px;
+            background-color: lightgray;
+        }
+        .hero-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 10px;
+        }
+        .back-to-top {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            background-color: green;
+            color: white;
+            padding: 10px;
+            text-decoration: none;
+            display: none;
+        }
+        /* Show the back-to-top button when scrolling */
+        @media (min-height: 600px) {
+            .back-to-top {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="sticky-navbar">Sticky Navbar</div>
+    
+    <div class="hero">
+        <div class="hero-text">Absolutely Positioned Hero Text</div>
+    </div>
+
+    <div class="content" style="height: 1000px; padding: 20px;">
+        <p>Scroll down to see the back-to-top button.</p>
+    </div>
+    
+    <a href="#" class="back-to-top">↑ Top</a>
+</body>
+</html>
